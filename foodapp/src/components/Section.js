@@ -85,7 +85,7 @@ const Section=() =>{
             <div id="meal" class="container1">
               {/* Display meals here */}
               {meals.map(meal => (
-        <div key={meal._id} class="embed">
+        <div key={meal._id} className="embed">
           <h2>{meal.RecipeName}</h2>
           <p>Ingredients: {meal.Ingredients}</p>
           <p>Instructions: {meal.TranslatedInstructions}</p>

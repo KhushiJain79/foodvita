@@ -16,12 +16,10 @@ app.get('/getfood/:search', async(req, res) => {
    
     if (searchQuery) {
       // If a search query is provided, perform a search based on recipe name
-      meals = await Meal.find({ "RecipeName": { $regex: new RegExp(searchQuery, 'i') } });
+      meals = await Meal.find({ "Ingredients": { $regex: new RegExp(searchQuery, 'i') } });
      
-      meals.forEach(meal => {
-        console.log(meal.RecipeName);
-      });
-      console.log(meals);
+    
+     
     } else {
       // If no search query is provided, fetch all meals
       meals = await Meal.find();
