@@ -10,9 +10,9 @@ const Section=() =>{
 
   const handleSearch = async () => {
     try {
-      console.log(searchInput);
-      const response = await fetch(`http://localhost:5000/api/fetchdata/getfood/${searchInput}`);
-      // const response = await fetch('http://localhost:5000/api/fetchdata/getfood/${searchInput}');
+      
+      const response = await fetch(`https://foodvita-1.onrender.com/api/fetchdata/getfood/${searchInput}`);
+
 
       const data = await response.json();
       setMeals(data);
@@ -82,7 +82,7 @@ const Section=() =>{
 
           <div className="meal-result">
             <h2 className="title">Your Search Results:</h2>
-            <div id="meal" class="container1">
+            <div id="meal" className="container1">
               {/* Display meals here */}
               {meals.map(meal => (
         <div key={meal._id} className="embed">
