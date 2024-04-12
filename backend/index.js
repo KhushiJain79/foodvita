@@ -8,7 +8,7 @@ connectDB();
 const port = process.env.PORT || 5000;
 app.use(cors());
 app.use(cors({
-  origin: 'https://foodvita3.onrender.com/'
+  origin: 'https://foodvita3.onrender.com'
   // You can also configure other CORS options here if needed
 }));
 app.use(express.json());
